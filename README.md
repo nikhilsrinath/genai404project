@@ -101,11 +101,3 @@ An extension of UnstyledLink Component, you can add your default styling for a b
 />
 ```
 
-### Default Favicon Declaration
-Use [Favicon Generator](https://www.favicon-generator.org/) and then overwrite the files in `/public/favicon`
-
-### Just-In-Time Tailwindcss
-Defaulted to true, you can uncomment the `mode='jit'` in `/tailwind.config.js`
-
-### Default Styles
-There are default styles for responsive heading sizes, and `.layout` to support a max-width for larger screen size.
