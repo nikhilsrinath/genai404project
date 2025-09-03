@@ -1,5 +1,3 @@
-# Vite React Tailwind Starter
-![Screenshots](https://i.imgur.com/vlZMdj3.png)
 
 
 This is a [Vite](https://vitejs.dev/), [React](https://reactjs.org/) and [Tailwind CSS](https://tailwindcss.com/) project bootstrapped using vite-react-tailwind-starter created by [Theodorus Clarence](https://github.com/theodorusclarence/vite-react-tailwind-starter).
