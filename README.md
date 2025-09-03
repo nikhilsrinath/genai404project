@@ -1,72 +1,103 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+This is a [Vite](https://vitejs.dev/), [React](https://reactjs.org/) and [Tailwind CSS](https://tailwindcss.com/) project bootstrapped using vite-react-tailwind-starter created by [Theodorus Clarence](https://github.com/theodorusclarence/vite-react-tailwind-starter).
+- 💡 Instant Server Start
+- ⚡️ Lightning Fast HMR
+- 🛠️ Rich Features
+- 📦 Optimized Build
+- 🔩 Universal Plugin Interface
+- 🔑 Fully Typed APIs
 
-In the project directory, you can run:
+See the deployment on [https://vite-react-tailwind-starter.theodorusclarence.com/](https://vite-react-tailwind-starter.theodorusclarence.com/)
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Installation
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Clone the template
 
-### `npm test`
+To clone this template you can use one of the three ways:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+#### 1. Use npx degit
+```bash
+npx degit https://github.com/theodorusclarence/vite-react-tailwind-starter my-app
+```
+replace `my-app` with your application name
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+#### 2. Use this repository as a template
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![Use as template](https://i.imgur.com/I6aThUJ.png)
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+#### 3. Deploy to vercel
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2Ftheodorusclarence%2Fvite-react-tailwind-starter)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Running The Application
+First, install all the dependencies,
+```bash
+npm i
+# or
+yarn
+```
 
-## Learn More
+Then, run the development server:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```bash
+npm run dev
+# or
+yarn dev
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-### Code Splitting
+![Finished Build](https://i.imgur.com/c9P343j.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+You can start editing the page by modifying `pages/Home.jsx`. The page auto-updates as you edit the file.
 
-### Analyzing the Bundle Size
+## What's Inside
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Absolute import
 
-### Making a Progressive Web App
+You can absolute import by using `@/`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+For example
+```jsx
+import UnstyledLink from '@/components/UnstyledLink'
+```
+You can also use auto import and it should work automatically.
 
-### Advanced Configuration
+When you add a new folder in src, add it on the `jsconfig.json`
+```json
+{
+  "compilerOptions": {
+    "jsx": "preserve",
+    "baseUrl": "./src",
+    "paths": {
+      "@/components/*": ["./components/*"],
+      "@/pages/*": ["./pages/*"],
+      "@/routes/*": ["./routes/*"],
+      // add new folder here
+    },
+  },
+}
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Inter Fonts
 
-### Deployment
+Inter fonts is self hosted. The default weights are `400, 600, 700`. To add more, use fontsquirrel.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### UnstyledLink Component
+Used as a component for Next.js Link. Will render out Next/Link if the href started with `/` or `#`, else will render an `a` tag with `target='_blank'`.
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify) 
-
+### CustomLink Component
+An extension of UnstyledLink Component, you can add your default styling for a button/link.
+```jsx
+<UnstyledLink
+      className={`${props.className} inline-flex items-center font-bold hover:text-primary-400`}
+      {...props}
+/>
+```
 
