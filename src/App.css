@@ -36,3 +36,55 @@
     transform: rotate(360deg);
   }
 }
+
+/* iOS Toggle Switch */
+.ios-toggle {
+  position: relative;
+  width: 52px;
+  height: 32px;
+}
+
+.ios-toggle input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.ios-toggle-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #3A3A3C;
+  transition: .4s;
+  border-radius: 34px;
+}
+
+.ios-toggle-slider:before {
+  position: absolute;
+  content: "";
+  height: 24px;
+  width: 24px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .ios-toggle-slider {
+  background-color: #34C759;
+}
+
+input:checked + .ios-toggle-slider:before {
+  transform: translateX(20px);
+}
+
+@supports (padding: max(0px)) {
+  .ios-floating-button {
+    bottom: max(1rem, env(safe-area-inset-bottom));
+    right: max(1rem, env(safe-area-inset-right));
+  }
+}
