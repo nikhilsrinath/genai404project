@@ -53,7 +53,7 @@ export default function Login() {
         <h2 className="text-xl font-bold mb-4">Login</h2>
         <input
           type="text"
-          placeholder="Username"
+          placeholder="user"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
           className="w-full border p-2 rounded mb-3"
