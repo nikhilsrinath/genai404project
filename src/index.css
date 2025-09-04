@@ -2,8 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+<<<<<<< HEAD
 @font-face {
   font-family: 'San Francisco';
   font-weight: 400;
   src: url('https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfrancisco-display-regular-webfont.woff2');
 }
+=======
+@import "@fontsource/baloo-2";
+@import "@fontsource/baloo-2/400.css";
+@import "@fontsource/baloo-2/500.css";
+@import "@fontsource/baloo-2/700.css";
+>>>>>>> sugan
