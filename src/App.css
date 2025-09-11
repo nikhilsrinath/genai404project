@@ -1,36 +1,3 @@
-<<<<<<< HEAD
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-=======
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
 @import "react-datepicker/dist/react-datepicker.css";
 
@@ -57,7 +24,6 @@
 }
 
 @keyframes logo-spin {
->>>>>>> sugan
   from {
     transform: rotate(0deg);
   }
@@ -66,59 +32,6 @@
   }
 }
 
-<<<<<<< HEAD
-/* iOS Toggle Switch */
-.ios-toggle {
-  position: relative;
-  width: 52px;
-  height: 32px;
-}
-
-.ios-toggle input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-.ios-toggle-slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #3A3A3C;
-  transition: .4s;
-  border-radius: 34px;
-}
-
-.ios-toggle-slider:before {
-  position: absolute;
-  content: "";
-  height: 24px;
-  width: 24px;
-  left: 4px;
-  bottom: 4px;
-  background-color: white;
-  transition: .4s;
-  border-radius: 50%;
-}
-
-input:checked + .ios-toggle-slider {
-  background-color: #34C759;
-}
-
-input:checked + .ios-toggle-slider:before {
-  transform: translateX(20px);
-}
-
-@supports (padding: max(0px)) {
-  .ios-floating-button {
-    bottom: max(1rem, env(safe-area-inset-bottom));
-    right: max(1rem, env(safe-area-inset-right));
-  }
-}
-=======
 @media (prefers-reduced-motion: no-preference) {
   a:nth-of-type(2) .logo {
     animation: logo-spin infinite 20s linear;
@@ -133,4 +46,3 @@ input:checked + .ios-toggle-slider:before {
   color: #888;
 }
 
->>>>>>> sugan
