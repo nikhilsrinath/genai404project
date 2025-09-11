@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from "./pages/Login";
 import UserDetails from "./pages/UserDetails";
 import ProfessionPage from "./pages/ProffesionPage";
-import AiPage from "./pages/AiPage";
+import AiPage from "./pages/AiChat";
 import Home from "./pages/Home";
 import Profile from "./pages/Profile";
 import Root from "./pages/Root";

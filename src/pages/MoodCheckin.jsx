@@ -43,7 +43,7 @@ const moodOptions = [
   },
 ];
 
-const MoodCheckin = ({ setCurrentMood }) => {
+const MoodCheckin = ({ onSubmit }) => {
   const [selected, setSelected] = useState(null);
   const [hovered, setHovered] = useState(null);
 
@@ -52,11 +52,8 @@ const MoodCheckin = ({ setCurrentMood }) => {
   };
 
   const handleNext = () => {
-    if (selected) {
-      localStorage.setItem("currentMood", selected);
-      localStorage.setItem("lastCheckin", new Date().toISOString());
-      setCurrentMood(selected);
-      window.location.reload();
+    if (selected && onSubmit) {
+      onSubmit(selected); // ✅ send to Profile.jsx
     }
   };
 
@@ -135,11 +132,10 @@ const MoodCheckin = ({ setCurrentMood }) => {
               
               {/* Selection indicator */}
               {selected === mood.id && (
-  <div className="absolute top-2 right-2 w-6 h-6 bg-white rounded-full flex items-center justify-center">
-    <div className={`w-4 h-4 rounded-full animate-ping ${mood.ping}`}></div>
-  </div>
-)}
-
+                <div className="absolute top-2 right-2 w-6 h-6 bg-white rounded-full flex items-center justify-center">
+                  <div className={`w-4 h-4 rounded-full animate-ping ${mood.ping}`}></div>
+                </div>
+              )}
             </button>
           ))}
         </div>
@@ -177,7 +173,7 @@ const MoodCheckin = ({ setCurrentMood }) => {
       </div>
 
       {/* Custom animations */}
-      <style jsx>{`
+      <style >{`
         @keyframes float {
           0%, 100% { transform: translateY(0) rotate(0deg); }
           50% { transform: translateY(-20px) rotate(5deg); }
